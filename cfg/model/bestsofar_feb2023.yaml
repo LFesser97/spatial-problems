@@ -1,0 +1,18 @@
+common:
+  dropout: 0.23311224930947888
+  nonlin_type: ReLU
+  embed_dim: 64
+
+backbone_gn:
+  net_type: graph attn
+  kwargs:
+    n_layers: 5
+    in_node_dim: 8
+    in_edge_dim: 10
+    use_norm: false
+    n_heads: 4
+    dense: false
+
+defaults:
+  - _self_
+  - route_generator: biased

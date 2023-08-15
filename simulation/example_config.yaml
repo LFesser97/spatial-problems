@@ -1,0 +1,32 @@
+basin_radius_m: 500.0
+delay_tolerance_s: 1800
+initial_wait_tolerance_s: 300
+change_time_s: 60
+transfer_radius_m: 100.0
+transfer_penalty_s: 10
+beeline_dist_factor: 1.3
+# just under 5 kph
+walk_speed_mps: 1.35
+# approximately 54 kph
+mean_intersection_time_s: 10.0
+mean_stop_time_s: 60.0
+# used to convert vehicle power to a penalty in units of people.
+person_value_in_kW: 3.814
+penalize_indirection: True
+
+grid_city:
+  num_x_nodes: 5
+  num_y_nodes: 4
+  city_size: 40_000
+  num_travellers: 1000
+  num_demand_loci: 5
+  demand_stddev_m: 1000
+  drive_speed_mps: 15
+
+vehicle_type:
+  id: '1'
+  description: 'bus'
+  seats: 50
+  standing_room: 50
+  length_m: 18
+  avg_power_kW: 26.7

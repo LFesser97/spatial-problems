@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE network SYSTEM "http://matsim.org/files/dtd/network_v1.dtd">
+<network>
+<nodes>
+<node x="0.0" y="0.0" id="1" />
+<node x="100.0" y="0.0" id="2" />
+<node x="200.0" y="0.0" id="3" />
+<node x="20000.0" y="0.0" id="4" />
+<node x="20100.0" y="0.0" id="5" />
+<node x="20200.0" y="0.0" id="6" />
+<node x="20000.0" y="-200.0" id="7" />
+<node x="20000.0" y="15000.0" id="8" />
+<node x="21900.0" y="17000.0" id="9" />
+<node x="0.0" y="-200.0" id="-1" />
+<node x="22000.0" y="16900.0" id="10" />
+<node x="-100.0" y="1100.0" id="11" />
+</nodes>
+
+<links capperiod="10:00:00">
+<link id="-1-1" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="200" to="1" from="0"/>
+<link id="1-2" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="100" to="2" from="1"/>
+<link id="2-3" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="100" to="3" from="2"/>
+<link id="3-4" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="19800" to="4" from="3"/>
+<link id="4-5" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="100" to="5" from="4"/>
+<link id="5-6" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="100" to="6" from="5"/>
+<link id="7-4" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="200" to="4" from="7"/>
+<link id="1-8" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="30000" to="8" from="1"/>
+<link id="4-8" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="15000" to="8" from="4"/>
+<link id="8-9" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="3000" to="9" from="8"/>
+<link id="8-10" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="3000" to="10" from="8"/>
+<link id="9-11" modes="pt" permlanes="1" capacity="2000" freespeed="22" length="29000" to="11" from="9"/>
+</links>
+</network>

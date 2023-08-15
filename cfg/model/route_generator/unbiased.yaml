@@ -1,0 +1,7 @@
+type: UnbiasedPathCombiner
+kwargs:
+  n_heads: 4
+  n_encoder_layers: 2
+  n_selection_attn_layers: 1
+  # this doesn't do anything
+  n_nodepair_layers: 1

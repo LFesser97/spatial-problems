@@ -1,0 +1,5 @@
+csv: true
+dataset:
+  type: mumford
+  path: datasets/mumford_dataset/Instances
+  

@@ -1,0 +1,18 @@
+reward_scale: 1
+batch_size: 16
+baseline_mode: greedy
+decay: 0.01980272
+lr: 0.0009688125
+demand_scale: 0.7763029
+n_epochs: 10
+space_scale: 0.5379948
+optimizer: Adam
+outdir: outputs
+discount_rate: 0.0
+dataset: datasets/50_nodes/mixed
+eval_n_routes: [1, 5, 10, 15, 20]
+
+defaults:
+  - _self_
+  - experiment: standard
+  - model: optimal_jan2022

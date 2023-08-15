@@ -1,0 +1,4 @@
+ID,t_orix,t_oriy,t_desx,t_desy,t_time,t_expf,true departure stop,true arrival stop,notes
+0,-50,-50,22000,17000,504,1,192,899,"2 routes possible, 1-transfer journey"
+1,-50,-50,22000,17000,604,1,-191,8910,"same two routes possible, but takes 0-transfer journey"
+2,-100,-100,-100,1100,500,1,,,walking is faster

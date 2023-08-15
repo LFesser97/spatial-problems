@@ -1,0 +1,12 @@
+n_samples: 20
+batch_size: 128
+
+experiment:
+  logdir: null
+
+defaults:
+  - experiment: standard
+  - model: bestsofar_feb2023
+  - eval: 50_nodes
+  - _self_
+

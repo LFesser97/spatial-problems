@@ -1,0 +1,25 @@
+batch_size: 64
+n_epochs: 6
+reward_scale: 1.0
+lr: 0.0016134816080499328
+decay: 0.0008404361781997002
+optimizer: Adam
+baseline_mode: neural
+eval_n_routes: 10
+discount_rate: null
+
+eval:
+  min_route_len: 2
+  max_route_len: 12
+
+dataset:
+  type: pickle
+  kwargs:
+    path: datasets/20_nodes/mixed_mumford
+    space_scale: 0.6
+    demand_scale: 0.2
+
+defaults:
+  - _self_
+  - experiment: standard
+  - model: bestsofar_feb2023

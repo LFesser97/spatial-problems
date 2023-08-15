@@ -1,0 +1,11 @@
+n_bees: 10
+n_iterations: 40
+batch_size: 64
+init_from_model: true
+neural_bees: true
+
+defaults:
+  - _self_
+  - experiment: standard
+  - model: bestsofar_feb2023
+  - eval: 50_nodes

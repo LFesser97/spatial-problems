@@ -1,0 +1,6 @@
+n_iterations: 40000
+batch_size: 128
+f_0: 0.0
+
+defaults:
+  - experiment: standard

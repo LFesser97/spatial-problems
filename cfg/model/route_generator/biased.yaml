@@ -1,0 +1,7 @@
+type: PathCombiningRouteGenerator
+kwargs:
+  n_nodepair_layers: 1                           
+  n_scorelenfn_layers: 3
+  scorelenfn_hidden_dim: 8
+  n_halt_layers: 2
+  n_halt_heads: 4

@@ -1,0 +1,9 @@
+ID,t_orix,t_oriy,t_desx,t_desy,t_time,t_expf,true departure stop,true arrival stop,notes
+0,104,5,20106,-3,604.9,1,293,596,Takes second bus
+1,5,5,20000,-5,504.9,1,192,495,Takes first bus
+2,5,5,20000,-5,700,1,,,Misses both buses
+3,5,-5000,20000,-5,500,1,,,Origin too far from any stop
+4,5,5,20000,-5000,500,1,,,Destination too far from any stop
+5,20000,5,5,-5,500,1,,,Tries to go in a direction with no route
+6,5,5,20000,-5,330,1,,,Tries to start too early
+7,9,5,11,4,500,1,,,Origin and destination are within walking distance

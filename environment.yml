@@ -1,0 +1,37 @@
+name: ptlearn
+
+channels:
+  - pytorch
+  - pyg
+  - conda-forge
+  - defaults
+  - pyg
+
+dependencies:
+  - python=3.8.*
+  - cudatoolkit=11.6.*
+  - pytorch=1.12.*
+  - pyg=2.1.*
+  - tensorboard=2.10.*
+  - pandas=1.5.*
+  - scikit-learn=0.24.*
+  - tqdm=4.44.*
+  - lxml=4.5.*
+  - scipy=1.7.*
+  - pyproj=2.6.*
+  - networkx=2.5
+  - pyyaml=5.4.*
+  - pillow=8.0.0
+  - folium=0.12.1
+  - geojson=2.5.0
+  - h5py=3.6.0
+  # only needed for doing hyperparameter optimization
+  - optuna=3.0.*
+  - sqlalchemy=1.4.46
+  # only needed for running tests
+  - pytest=5.4.*
+  # only neaded for plotting
+  - matplotlib=3.4.*
+  - seaborn=0.12.*
+  - hydra-core=1.2.*
+  

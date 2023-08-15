@@ -1,0 +1,7 @@
+batch_size: 128
+f_0: 0.0
+experiment.cost_function.kwargs.unserved_weight: 0.0
+
+defaults:
+  - experiment: standard
+  - eval: mumford

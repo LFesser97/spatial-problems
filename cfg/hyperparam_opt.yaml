@@ -1,0 +1,56 @@
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    n_trials: 100
+    params:
+      # batch_size: choice(8, 16, 32, 64, 128)
+      # eval_n_routes: range(1, 10)
+      lr: tag(log,interval(1e-7, 1e-2))
+      decay: tag(log,interval(1e-7, 1e-1))
+      model.common.dropout: interval(0.0, 0.5)
+      model.common.embed_dim: choice(8, 16, 32, 64)
+      model.backbone_gn.kwargs.use_norm: choice(true, false)
+      model.backbone_gn.kwargs.n_heads: choice(1, 2, 4, 8)
+      model.backbone_gn.kwargs.n_layers: range(3, 9)
+      model.route_generator.kwargs.n_nodepair_layers: range(1, 3)
+      model.route_generator.kwargs.n_scorelenfn_layers: range(1, 3)
+      model.route_generator.kwargs.scorelenfn_hidden_dim: choice(8, 16, 32, 64)
+      model.route_generator.kwargs.n_halt_layers: range(1, 3)
+      model.route_generator.kwargs.n_halt_heads: choice(1, 2, 4, 8)
+
+batch_size: 64
+n_epochs: 5
+reward_scale: 1
+lr: 0.0016134816080499328
+decay: 0.0008404361781997002
+optimizer: Adam
+baseline_mode: neural
+bl_alpha: 0.01
+# eval_n_routes: [1, 5, 10, 15, 20]
+eval_n_routes: 10
+discount_rate: null
+
+dataset:
+  type: pickle
+  kwargs:
+    path: datasets/20_nodes/mixed_mumford
+    space_scale: 0.6
+    demand_scale: 0.2                                
+
+# dataset:
+#   type: dynamic
+#   val_path: datasets/20_nodes/mixed_mini
+#   kwargs:
+#     min_nodes: 20
+#     max_nodes: 20
+#     space_scale: 0.23433862374516523
+#     demand_scale: 0.9182031670412057
+#     edge_keep_prob: 0.7
+#     directed: false
+#     fully_connected_demand: false
+
+defaults:
+  - _self_
+  - experiment: standard
+  - model: bestsofar_feb2023
+  - override hydra/sweeper: optuna
